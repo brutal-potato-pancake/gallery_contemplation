@@ -1,0 +1,23 @@
+* move window to other screen with swipe (?) see void QWindow::setScreen(QScreen *newScreen)
+* search public methods, which should be placed in private section
+* support for multimonitor, see QCursor::pos();
+* support for some Qt versions (4.6, 4.8, 5.15, 6.0)
+* tray support
+* show img files in open directory dialog, write own dialog since default doesn't show images (facepalm.jpg)
+* have in mind taborder
+* shortcust
+* gestures
+* build *.apk
+* android-ready controls
+* Apply graphics effects to change image (as in presentations)
+* Apply graphics effects to image itself
+* compile for embeded (experimental)
+* music
+* sound effects when slide changes
+* work with *tar.gz instead folder
+* create presentation?
+* ghost controls: switch simple/precission(spinbox or slider) in options
+* text templates for user gr. effects for some p. langs
+* work as lock screen
+* detect asus secondary screen
+* test on embeded emulator
