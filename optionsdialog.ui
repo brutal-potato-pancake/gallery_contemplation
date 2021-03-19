@@ -16,6 +16,11 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="btn_tabs">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
      <property name="currentIndex">
       <number>3</number>
      </property>
@@ -23,58 +28,6 @@
       <attribute name="title">
        <string>🌏</string>
       </attribute>
-      <widget class="QCheckBox" name="btn_allow_only_1">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>60</y>
-         <width>85</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_show_info">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>30</y>
-         <width>85</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>🛈</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_cycle">
-       <property name="geometry">
-        <rect>
-         <x>130</x>
-         <y>100</y>
-         <width>85</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>⮔</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_manually">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>260</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>✋</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
@@ -88,374 +41,480 @@
         <string>🕑</string>
        </property>
       </widget>
-      <widget class="QCheckBox" name="btn_sit_in_tray">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>60</y>
-         <width>85</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>tray</string>
-       </property>
-      </widget>
-      <widget class="QDoubleSpinBox" name="btn_delay_time">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>230</y>
-         <width>81</width>
-         <height>21</height>
+         <y>30</y>
+         <width>261</width>
+         <height>121</height>
         </rect>
        </property>
-       <property name="maximum">
-        <double>999.990000000000009</double>
-       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="btn_show_info">
+          <property name="text">
+           <string>🛈</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="btn_allow_only_1">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QCheckBox" name="btn_sit_in_tray">
+          <property name="text">
+           <string>tray</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QComboBox" name="btn_order">
+          <property name="font">
+           <font>
+            <family>Symbola</family>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QCheckBox" name="btn_cycle">
+          <property name="text">
+           <string>⮔</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QCheckBox" name="btn_reverse_order">
+          <property name="text">
+           <string>↓↑</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>240</y>
-         <width>57</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>↑↓</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_reverse_order">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>100</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>↓↑</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="btn_order">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>100</y>
-         <width>79</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Symbola</family>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_main_window_opacity">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>30</x>
          <y>180</y>
-         <width>43</width>
-         <height>24</height>
+         <width>136</width>
+         <height>108</height>
         </rect>
        </property>
-       <property name="minimum">
-        <number>0</number>
-       </property>
-       <property name="maximum">
-        <number>99</number>
-       </property>
-       <property name="value">
-        <number>0</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_7">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>180</y>
-         <width>57</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>🗔👻</string>
-       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QSpinBox" name="btn_main_window_opacity">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>99</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>🗔👻</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QDoubleSpinBox" name="btn_delay_time">
+          <property name="maximum">
+           <double>999.990000000000009</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>↑↓</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QCheckBox" name="btn_manually">
+          <property name="text">
+           <string>✋</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
      <widget class="QWidget" name="btn_tab_panel_options">
       <attribute name="title">
        <string>[◀ || ▶]</string>
       </attribute>
-      <widget class="QCheckBox" name="btn_show_panel">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>30</x>
          <y>30</y>
-         <width>85</width>
-         <height>21</height>
+         <width>116</width>
+         <height>69</height>
         </rect>
        </property>
-       <property name="text">
-        <string>[◀ || ▶]</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_cinema_limit_2">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>60</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="specialValueText">
-        <string>unlimited</string>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="btn_show_panel">
+          <property name="text">
+           <string>[◀ || ▶]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QSpinBox" name="btn_cinema_limit_2">
+          <property name="specialValueText">
+           <string>unlimited</string>
+          </property>
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
      <widget class="QWidget" name="btn_tab_nonimage_formats">
       <attribute name="title">
        <string>📼</string>
       </attribute>
-      <widget class="QCheckBox" name="btn_nonimage_formats">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>291</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>(*.gif, *.html, *.pdf, *.odf, *.mp4, *.sfw ...)</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_allow_txt_files">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>60</y>
-         <width>261</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>(*.txt)</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="btn_txt_file_font">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>60</y>
-         <width>80</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_txt_file_font_sz">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>60</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_delay_for_slides">
-       <property name="geometry">
-        <rect>
-         <x>170</x>
-         <y>100</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_cinema_limit">
-       <property name="geometry">
-        <rect>
-         <x>270</x>
-         <y>100</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="specialValueText">
-        <string>unlimited</string>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_nonimage_formats_3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>100</y>
-         <width>141</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>wait for cinema end</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_nonimage_formats_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>140</y>
-         <width>241</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>allow interaction (on your own risk)</string>
-       </property>
-      </widget>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0" colspan="6">
+        <widget class="QCheckBox" name="btn_nonimage_formats">
+         <property name="text">
+          <string>(*.gif, *.html, *.pdf, *.odf, *.mp4, *.sfw ...)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="btn_allow_txt_files">
+         <property name="text">
+          <string>(*.txt)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn_txt_file_font">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="btn_txt_file_font_sz">
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QCheckBox" name="btn_nonimage_formats_3">
+         <property name="text">
+          <string>wait for cinema end</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QSpinBox" name="btn_delay_for_slides">
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QSpinBox" name="btn_cinema_limit">
+         <property name="specialValueText">
+          <string>unlimited</string>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="6">
+        <widget class="QCheckBox" name="btn_nonimage_formats_4">
+         <property name="text">
+          <string>allow interaction (on your own risk)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="btn_tab_xy">
       <attribute name="title">
        <string>X, Y</string>
       </attribute>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>80</y>
-         <width>57</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>⌖ Y</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="btn_keep_aspect_ratio">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>130</y>
-         <width>85</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Y = N * X</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_pos_y">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>70</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_sz_x">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>40</y>
-         <width>57</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>⌖ X</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_sz_y">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>70</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>80</y>
-         <width>57</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Y</string>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="btn_pos_x">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>30</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>40</y>
-         <width>57</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>X</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QSpinBox" name="btn_sz_x">
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>⌖ X</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="btn_pos_x">
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QSpinBox" name="btn_sz_y">
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>⌖ Y</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="btn_pos_y">
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Y</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="5" column="0">
+           <widget class="QRadioButton" name="btn_true_frame">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <strikeout>false</strikeout>
+             </font>
+            </property>
+            <property name="text">
+             <string>[]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QWidget" name="lt_strips_options" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QPushButton" name="btn_select_color_for_strips">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_select_img_for_strips">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="btn_strips_inframe_mode">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSpinBox" name="btn_true_frame_sz">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>999</number>
+            </property>
+            <property name="value">
+             <number>25</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QRadioButton" name="btn_keep_aspect_ratio_by_resize">
+            <property name="text">
+             <string>Y = N * X</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="btn_no_aspect_ratio">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <strikeout>true</strikeout>
+             </font>
+            </property>
+            <property name="text">
+             <string>Y = N * X</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QRadioButton" name="btn_keep_aspect_ratio_by_strips">
+              <property name="text">
+               <string>Y = N * X</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_strips">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>||</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QComboBox" name="btn_fit_by_rotation">
+            <item>
+             <property name="text">
+              <string>0°</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>-90°</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>90°</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>⮯</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QComboBox" name="btn_rotation">
+           <item>
+            <property name="text">
+             <string>0°</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>90°</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>180°</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>270°</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>⮯</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_mirror_img">
+           <property name="text">
+            <string>🪞</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="btn_tab_run_when">
       <attribute name="title">

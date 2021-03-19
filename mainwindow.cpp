@@ -14,9 +14,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    params.aspect_ratio.w = this;
     curr_dir.setPath(QDir::home().path());
     settings = new QSettings("see_gallery.cfg", QSettings::Format::IniFormat, this);
-    //settings->setIniCodec("UTF-8");
+    //settings->setIniCodec("UTF-8"); //Qt 5
     if(!settings->contains("dir"))
         set_dir(QDir::home().absoluteFilePath("Изображения"));
 
@@ -70,7 +71,7 @@ void MainWindow::load_img(const QString& file_name)
     }
     ui->lbl_main_hint->hide();
     curr_img.load(file_name);
-    if(curr_img.isNull()) qDebug()<<file_name;    
+    if(curr_img.isNull()) qDebug()<<"can not load file: "<<file_name;
 
     //change_window_size(new_sz);
     background = QPixmap(curr_img);
@@ -161,9 +162,8 @@ void MainWindow::update_params(GalleryParams* new_params)
     set_pos(params.pos);
     set_delay();
     set_order();
-    if(params.set_aspect_ratio)
-        params.curr_width = this->size().width();
     this->setWindowOpacity(params.img_opacity);
+    update_size_while_keep_aspect_ratio();
     this->update();
 }
 
@@ -195,8 +195,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 
 void MainWindow::set_background()
 {
-    QPixmap resized_background(background);
-    resized_background = resized_background.scaled(size(), Qt::IgnoreAspectRatio);
+    QPixmap resized_background(params.aspect_ratio.resize(background));
     QPalette new_pallete = palette();
     new_pallete.setBrush(QPalette::Window, resized_background);
     setPalette(new_pallete);
@@ -216,13 +215,10 @@ void MainWindow::switch_fullscreen()
 
 void MainWindow::update_size_while_keep_aspect_ratio()
 {
-    static auto dt = QDateTime::currentMSecsSinceEpoch();
-    auto now = QDateTime::currentMSecsSinceEpoch();
-    if(now < dt + 150) return;
-    dt = now;
-    if(params.dont_keep_aspect_ratio()) return;
-    auto a_ratio = background.size().height() / background.size().width();
+    if(!params.aspect_ratio) return;
+    auto a_ratio = static_cast<double>(background.size().height()) / static_cast<double>(background.size().width());
     change_window_size(this->size().width(), this->size().width() * a_ratio);
+    set_background();
 }
 
 

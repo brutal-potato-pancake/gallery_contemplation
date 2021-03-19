@@ -41,4 +41,4 @@ private:
     void pause_on_go_back_because_img_soon_go_foward_when_delay_is_low();
 };
 
-#endif // CONTROLFORM_H
+#endif

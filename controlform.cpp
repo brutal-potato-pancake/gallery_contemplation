@@ -1,10 +1,10 @@
 #include <QListWidget>
 #include <QGraphicsOpacityEffect>
+#include <QApplication>
 
 #include "controlform.h"
 #include "ui_controlform.h"
-#include <QApplication>
-#include <mainwindow.h>
+#include "mainwindow.h"
 
 
 ControlForm::ControlForm(MainWindow *parent) :

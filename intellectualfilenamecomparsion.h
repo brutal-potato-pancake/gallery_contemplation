@@ -6,8 +6,6 @@
 #include <QDateTime>
 
 
-
-
 class SpecialStrComp
 {
 public:
@@ -120,7 +118,5 @@ inline bool intellectual_names_comparsion(const QString& a, const QString& b)
     }
     return params.exec(a1, b1);
 }
-
-
 
 #endif // INTELLECTUALFILENAMECOMPARSION_H

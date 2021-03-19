@@ -82,7 +82,7 @@ inline bool intellectual_names_comparsion(const QString& a, const QString& b)
 
 
 
-class MainWindow : public QMainWindow
+class MainWindow final: public QMainWindow
 {
     Q_OBJECT
 
@@ -160,4 +160,4 @@ private:
     ControlForm* control_form;
     QMenu menu;
 };
-#endif // MAINWINDOW_H
+#endif
